@@ -5,12 +5,22 @@ Intended to be a set of thor tasks for the managment of projects.
 
 Synopsis
 ========
-  `thor project foobar`
-    #=> creates directory `projects/foobar`
-    #=> creates a gemset called `foobar` in rvm
-    #=> installs basic files and gems
+
+    (eventually)
+    $ gem install workzone
+    $ wz config:home ~/projects
+    $ wz project foobar
+    $ wz project foobar --destroy --no-tar --i_am_sure
+    (/eventually)
+  
+    $ git clone git://github.com/cmaujean/workzone
+    $ cd workzone
+    $ thor project foobar
+      #=> creates directory projects/foobar
+      #=> creates a gemset called foobar in rvm
+      #=> installs basic files and gems
     
-  `thor project foobar --destroy --no-tar --i_am_sure`
+    $ thor project foobar --destroy --no-tar --i_am_sure
 
 Description
 ===========
@@ -52,7 +62,7 @@ Future options may include:
 * `--rails` - install the current version of rails in this project with some defaults
 * `--sinatra` - install a sinatra skeleton in this project with some defaults
 
-project NAME --destroy
+project NAME --destroy (not implemented)
 ----------------------
 
 `thor project NAME --destroy` - creates a tar file in projects/abandoned/ and 
@@ -71,8 +81,3 @@ License
 =======
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">workzone</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Christopher Maujean</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:cmaujean@gmail.com" rel="cc:morePermissions">mailto:cmaujean@gmail.com</a>.
-
-
-Author
-======
-Christopher Maujean <cmaujean@gmail.com>
