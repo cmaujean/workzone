@@ -1,8 +1,8 @@
 $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + "/lib"))
 require 'thor'
 require 'workzone'
-include Workzone
+include Workzone::Constants
 
-Dir.glob("#{WZ_ROOT_DIR}/lib/thor/**/*.rb").each do |file|
+Dir.glob("#{WZ_ROOT_DIR}/lib/workzone/tasks/**/*.rb").each do |file|
   require file
 end

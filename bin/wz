@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib') unless $LOAD_PATH.include?(File.dirname(__FILE__) + '/../lib')
+require 'thor'
+require 'workzone'
+require 'workzone/tasks/project'
+
+class WZ < Thor
+  include Thor::Actions
+  include Workzone::Constants
+
+  desc "project", "Invoke the project generator."
+  def project(*args)
+    Workzone::Tasks::Project.start ARGV[1..-1]
+  end
+end
+
+WZ.start
+
+
+
